@@ -85,26 +85,26 @@ function DashboardContent() {
       <header className="border-b border-zinc-800 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-black font-bold text-sm">
-              VC
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
+              <span className="text-black font-bold text-xs font-display tracking-tighter">VR</span>
             </div>
-            <span className="text-white font-semibold">VC Wrapped</span>
+            <span className="text-white font-display font-semibold tracking-tight">Venture Rapt</span>
             {isDemo && (
-              <span className="px-2 py-0.5 text-xs bg-amber-500/20 text-amber-400 rounded-full border border-amber-500/30">
-                Demo Mode
+              <span className="px-2 py-0.5 text-xs bg-zinc-800 text-zinc-400 rounded-full border border-zinc-700">
+                Demo
               </span>
             )}
           </div>
           <div className="flex items-center gap-3">
             <button
               onClick={() => router.push("/wrapped" + (isDemo ? "?demo=true" : ""))}
-              className="px-4 py-2 bg-gradient-to-r from-emerald-400 to-cyan-500 text-black font-medium rounded-lg text-sm hover:opacity-90 transition-opacity"
+              className="px-5 py-2 bg-white text-black font-semibold rounded-full text-sm hover:bg-zinc-200 transition-colors"
             >
-              Get Your Wrapped Card
+              Get Your Rapt Card
             </button>
             <button
               onClick={() => router.push("/")}
-              className="px-4 py-2 text-zinc-400 hover:text-white text-sm transition-colors"
+              className="px-4 py-2 text-zinc-500 hover:text-white text-sm transition-colors"
             >
               Home
             </button>
@@ -114,8 +114,8 @@ function DashboardContent() {
 
       <main className="max-w-7xl mx-auto px-6 py-8 space-y-6">
         <div>
-          <h1 className="text-3xl font-bold text-white mb-1">
-            Your Calendar Analytics
+          <h1 className="text-3xl font-display font-bold text-white mb-1 tracking-tight">
+            Your Performance Dashboard
           </h1>
           <p className="text-zinc-400">
             {stats.totalMeetings} meetings analyzed over the last 12 months

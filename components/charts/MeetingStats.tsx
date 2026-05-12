@@ -12,28 +12,24 @@ const cards = [
     label: "Total Hours",
     format: (s: DashboardStats) => s.totalHours.toLocaleString(),
     sub: (s: DashboardStats) => `across ${s.totalMeetings} meetings`,
-    gradient: "from-emerald-400 to-cyan-500",
   },
   {
     key: "companies",
     label: "Companies Met",
     format: (s: DashboardStats) => s.uniqueCompanies.toString(),
     sub: () => "unique companies",
-    gradient: "from-violet-400 to-purple-500",
   },
   {
     key: "avgWeek",
     label: "Avg Meetings/Week",
     format: (s: DashboardStats) => s.avgMeetingsPerWeek.toString(),
-    sub: (s: DashboardStats) => `busiest: ${s.busiestDay}`,
-    gradient: "from-orange-400 to-pink-500",
+    sub: (s: DashboardStats) => `peak day: ${s.busiestDay}`,
   },
   {
     key: "backToBack",
     label: "Longest Streak",
     format: (s: DashboardStats) => `${s.longestBackToBack}h`,
     sub: () => "back-to-back meetings",
-    gradient: "from-blue-400 to-indigo-500",
   },
 ];
 
@@ -43,15 +39,15 @@ export default function MeetingStats({ stats }: Props) {
       {cards.map((card) => (
         <div
           key={card.key}
-          className="bg-zinc-900 rounded-2xl p-5 border border-zinc-800"
+          className="bg-zinc-900/50 rounded-2xl p-5 border border-zinc-800/50"
         >
-          <p className="text-sm text-zinc-400 mb-1">{card.label}</p>
-          <p
-            className={`text-3xl font-bold bg-gradient-to-r ${card.gradient} bg-clip-text text-transparent`}
-          >
+          <p className="text-xs text-zinc-500 mb-1 uppercase tracking-wider font-medium">
+            {card.label}
+          </p>
+          <p className="text-3xl font-display font-bold text-white tracking-tight">
             {card.format(stats)}
           </p>
-          <p className="text-xs text-zinc-500 mt-1">{card.sub(stats)}</p>
+          <p className="text-xs text-zinc-600 mt-1">{card.sub(stats)}</p>
         </div>
       ))}
     </div>

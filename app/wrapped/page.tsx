@@ -50,10 +50,10 @@ function WrappedContent() {
       <header className="border-b border-zinc-800 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-cyan-500 flex items-center justify-center text-black font-bold text-sm">
-              VC
+            <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
+              <span className="text-black font-bold text-xs font-display tracking-tighter">VR</span>
             </div>
-            <span className="text-white font-semibold">VC Wrapped</span>
+            <span className="text-white font-display font-semibold tracking-tight">Venture Rapt</span>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -75,11 +75,11 @@ function WrappedContent() {
       </header>
 
       <main className="flex flex-col items-center py-12 px-6">
-        <h1 className="text-3xl font-bold text-white mb-2">
-          Your VC Wrapped
+        <h1 className="text-3xl font-display font-bold text-white mb-2 tracking-tight">
+          Your Rapt Card
         </h1>
-        <p className="text-zinc-400 mb-10">
-          Download your card and share it with the world
+        <p className="text-zinc-500 mb-10">
+          Download and share your performance card with the world
         </p>
 
         {wrappedData ? (

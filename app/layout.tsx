@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VC Wrapped — Calendar Analytics for Venture Capitalists",
+  title: "Venture Rapt — The Performance Layer for Elite Investors",
   description:
-    "Discover how you really spend your time. Connect your calendar, get insights, and share your VC Wrapped card.",
+    "Track your time. Decode your patterns. Sharpen your edge. The Whoop for your venture career.",
   openGraph: {
-    title: "VC Wrapped",
-    description: "Calendar analytics for venture capitalists. Your Spotify Wrapped, but for meetings.",
+    title: "Venture Rapt",
+    description: "The performance layer for elite investors. Track your calendar, decode your patterns.",
     type: "website",
   },
 };
