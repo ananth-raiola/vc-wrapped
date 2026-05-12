@@ -134,7 +134,7 @@ export default function WrappedCard({ data }: Props) {
           {/* Footer */}
           <div className="mt-10 pt-6 border-t border-zinc-800/50 w-full">
             <p className="text-zinc-700 text-[11px] tracking-wider uppercase">
-              venturerap t.com
+              venturerapt.com
             </p>
           </div>
         </div>
